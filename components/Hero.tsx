@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CustomButon from './CustomButon';
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 Streamline your car rental experience with our effortless booking process.
             </p>
 
-            <CustomButton />
+            <CustomButon />
         </div>
     </div>
   )
