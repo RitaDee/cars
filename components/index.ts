@@ -6,4 +6,6 @@ import Footer from './Footer';
 export {
     Hero,
     CustomButon,
+    Navbar,
+    Footer,
 }
