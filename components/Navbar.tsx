@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import CustomButon from "./CustomButon";
+import CustomButton from "./CustomButton";
 
 const Navbar = () => {
   return (
@@ -16,6 +16,12 @@ const Navbar = () => {
           className="object-contain"
            />
         </Link>
+
+        <CustomButton
+        title="Sign In"
+        btnType="button" 
+        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+        />
       </nav>
     </header>
   )
