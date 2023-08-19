@@ -1,3 +1,34 @@
+
+
+# Project Name
+
+Car Hub
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+<!-- Briefly explain what your project does and its purpose. -->
+
+## Features
+
+<!-- Highlight the key features of your project. -->
+
+## Installation
+
+<!-- Provide step-by-step instructions on how to install and set up your project. -->
+
+```bash
+$ git clone https://github.com/yourusername/your-project.git
+$ cd your-project
+$ npm install
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
