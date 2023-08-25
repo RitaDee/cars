@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { SearchManufacturer } from "./";
 
 const SearchBar = () => {
     const handleSearch = () => {}
@@ -11,4 +12,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default SearchBar;
