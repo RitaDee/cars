@@ -46,7 +46,6 @@ const SearchManufacturer = ({
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Option></Combobox.Option>
           </Transition>
         </div>
       </Combobox>
