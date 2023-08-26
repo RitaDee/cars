@@ -17,6 +17,11 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
                     alt="car-logo"
                      />
                 </Combobox.Button>
+                <Combobox.Input 
+                className="search-manufacturer__input"
+                placeholder="Volkswagen"
+                displayValue={(manufacturer: string) => manufacturer}
+                />
             </div>
         </Combobox>
     </div>
