@@ -47,8 +47,7 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")}
           >
             <Combobox.Option>
-              {
-                filteredManufacturers.map((item) => (
+              { filteredManufacturers.map((item) => (
                   <Combobox.Option
                     key={item}
                     className={({ active }) => `
