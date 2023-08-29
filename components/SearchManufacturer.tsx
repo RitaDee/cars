@@ -22,7 +22,6 @@ const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacture
     <div className='search-manufacturer'>
       <Combobox value={manufacturer} onChange={setManuFacturer}>
         <div className='relative w-full'>
-          {/* Button for the combobox. Click on the icon to see the complete dropdown */}
           <Combobox.Button className='absolute top-[14px]'>
             <Image
               src='/car-logo.svg'
@@ -33,17 +32,15 @@ const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacture
             />
           </Combobox.Button>
 
-          {/* Input field for searching */}
           <Combobox.Input
             className='search-manufacturer__input'
             displayValue={(item: string) => item}
-            onChange={(event) => setQuery(event.target.value)} // Update the search query when the input changes
+            onChange={(event) => setQuery(event.target.value)} 
             placeholder='Volkswagen...'
           />
 
-          {/* Transition for displaying the options */}
           <Transition
-            as={Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
+            as={Fragment} 
             leave='transition ease-in duration-100'
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
@@ -77,7 +74,6 @@ const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacture
                           {item}
                         </span>
 
-                        {/* Show an active blue background color if the option is selected */}
                         {selected ? (
                           <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active? "text-white": "text-pribg-primary-purple"}`}
                           ></span>
