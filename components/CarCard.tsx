@@ -1,8 +1,14 @@
 "use client";
 import { useState } from 'react';
 import Image from 'next/image';
+import { CarProps } from '@/types';
+import CustomButton from './CustomButton';
 
-const CarCard = ({ car }) => {
+interface CarCardProps {
+  car: CarProps;
+}
+
+const CarCard = ({ car }: CarCardProps) => {
   return (
     <div>CarCard</div>
   )
