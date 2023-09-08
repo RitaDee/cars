@@ -21,7 +21,7 @@ export interface CarProps {
   drive: string;
   fuel_type: string;
   highway_mpg: number;
-  make: string;
+  make: "Toyota Corolla";
   model: string;
   transmission: string;
   year: number;
