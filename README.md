@@ -1,5 +1,4 @@
 Modern Next.js 13 Application | React | TypeScript | Tailwind CSS
-![Car Showcase](https://i.ibb.co/GxvFJDZ/Thumbnail.png)
 
 
 # Project Name
