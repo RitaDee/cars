@@ -1,4 +1,4 @@
-Modern Next.js 13 Application | React | TypeScript | Tailwind CSS
+Next.js 13 Application | React | TypeScript | Tailwind CSS
 
 
 # Project Name
