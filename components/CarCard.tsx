@@ -58,7 +58,7 @@ const CarCard = ({ car }: CarCardProps) => {
           <CustomButton
           title="View More"
           containerStyles="w-full py-4 rounded-full bg-primary-blue"
-          textStyle="text-white text-sm leading-5 font-bold"
+          textStyles="text-white text-sm leading-5 font-bold"
           rightIcon="/right-arrow.svg"
           handleClick={() => setIsOpen(true)}
            />
@@ -68,4 +68,4 @@ const CarCard = ({ car }: CarCardProps) => {
   )
 }
 
-export default CarCard
+export default CarCard;
