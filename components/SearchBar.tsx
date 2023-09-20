@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { SearchManufacturer } from "./";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -19,13 +19,18 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState("");
     const [model, setModel] = useState("");
+    const router = useRouter();
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       if(manufacturer === "" && model === "") {
-        return alert("Please fill in the search")
+        return alert("Please fill in the search bar")
       }
+
+      updateSearchParams(
+        model.toLowerCase(), 
+        manufacturer.toLowerCase())
     }
 
     const updateSearchParams = (model: string, manufacturer: string) => {
