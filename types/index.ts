@@ -66,7 +66,7 @@ export interface ShowMoreProps {
   setLimit: (limit: number) => void;
 }
 
-export interface SearchManuFacturerProps {
+export interface SearchManufacturerProps {
   selected: string;
   setSelected: (selected: string) => void;
 }
