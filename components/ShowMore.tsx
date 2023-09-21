@@ -1,33 +1,27 @@
 "use client";
 
 import { ShowMoreProps } from "@/types";
-import { updateSearchParams } from "@/utils";
-import { useRouter } from "next/navigation";
 import { CustomButon } from ".";
 
-const ShowMore = ({ pageNumber, isNext}: ShowMoreProps) => {
-    const router = useRouter();
+const ShowMore = ({ pageNumber, isNext, setLimit }: ShowMoreProps) => {
+  const handleNavigation = () => {
+    const newLimit = (pageNumber + 1) * 10;
 
-    const handleNavigation = () => {
-      const newLimit = (pageNumber + 1) * 10;
-
-      const newPathname = updateSearchParams("limit", `${newLimit}`);
-
-      router.push(newPathname)
-    };
+    setLimit(setLimit);
+  };
 
   return (
     <div className="w-full flex-center gap-5 mt-10">
-        {!isNext && (
-            <CustomButon 
-            title="Show More"
-            btnType="button"
-            containerStyles="bg-primary-blue rounded-full text-white"
-            handleClick={handleNavigation}
-            />
-        )}
+      {!isNext && (
+        <CustomButon
+          title="Show More"
+          btnType="button"
+          containerStyles="bg-primary-blue rounded-full text-white"
+          handleClick={handleNavigation}
+        />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default ShowMore
+export default ShowMore;
