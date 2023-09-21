@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+
 import Image from "next/image";
+import React, { useState } from "react";
 import { SearchManufacturer } from "./";
-import { useRouter } from "next/navigation";
+import { SearchBarProps } from "@/types";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -16,24 +17,22 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-const SearchBar = ( { setManufacturer, setModel } ) => {
-    const [searchManufacturer, setSearchManufacturer] = useState('');
-    const [searchModel, setSearchModel] = useState('');
-    const router = useRouter();
+const SearchBar = ({ setManuFacturer, setModel }: SearchBarProps) => {
+  const [searchModel, setSearchModel] = useState("");
+  const [searchManufacturer, setSearchManufacturer] = useState("");
 
-    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-      if(searchManufacturer === '' && searchModel === '') {
-        return alert("Please fill in the search bar")
-      }
+    if (searchManufacturer.trim() === "" && searchModel.trim() === "")
+      return alert("Please provide some input");
 
-      setModel(searchModel);
-      setManufacturer(searchManufacturer);
-    }
+    setModel(searchModel);
+    setManuFacturer(searchManufacturer);
+  };
 
   return (
-     <form className='searchbar' onSubmit={handleSearch}>
+    <form className='searchbar' onSubmit={handleSearch}>
       <div className='searchbar__item'>
         <SearchManufacturer
           selected={searchManufacturer}
@@ -61,7 +60,7 @@ const SearchBar = ( { setManufacturer, setModel } ) => {
       </div>
       <SearchButton otherClasses='max-sm:hidden' />
     </form>
-  )
-}
+  );
+};
 
 export default SearchBar;

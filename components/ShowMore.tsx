@@ -1,13 +1,13 @@
 "use client";
 
 import { ShowMoreProps } from "@/types";
-import { CustomButon } from ".";
+import { CustomButon } from "./";
 
 const ShowMore = ({ pageNumber, isNext, setLimit }: ShowMoreProps) => {
   const handleNavigation = () => {
     const newLimit = (pageNumber + 1) * 10;
 
-    setLimit(setLimit);
+    setLimit(newLimit);
   };
 
   return (
