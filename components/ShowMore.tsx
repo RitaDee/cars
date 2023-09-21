@@ -1,8 +1,9 @@
-"use clientSide";
+"use client";
 
 import { ShowMoreProps } from "@/types";
 import { updateSearchParams } from "@/utils";
 import { useRouter } from "next/navigation";
+import { CustomButon } from ".";
 
 const ShowMore = ({ pageNumber, isNext}: ShowMoreProps) => {
     const router = useRouter();
@@ -12,11 +13,20 @@ const ShowMore = ({ pageNumber, isNext}: ShowMoreProps) => {
 
       const newPathname = updateSearchParams("limit", `${newLimit}`);
 
-      router.push(newPathname);
+      router.push(newPathname)
     };
 
   return (
-    <div>ShowMore</div>
+    <div className="w-full flex-center gap-5 mt-10">
+        {!isNext && (
+            <CustomButon 
+            title="Show More"
+            btnType="button"
+            containerStyles="bg-primary-blue rounded-full text-white"
+            handleClick={handleNavigation}
+            />
+        )}
+    </div>
   )
 }
 
