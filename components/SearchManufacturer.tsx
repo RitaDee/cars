@@ -33,7 +33,7 @@ const SearchManufacturer = ({ selected, setSelected }: SearchManufacturerProps) 
           </Combobox.Button>
 
           <Combobox.Input
-            className='search-manufacturer__input'
+            className='search-manufacturer__input bg-white'
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)} 
             placeholder='Volkswagen...'

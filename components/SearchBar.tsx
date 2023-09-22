@@ -12,7 +12,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
       alt={"magnifying glass"}
       width={40}
       height={40}
-      className='object-contain'
+      className='object-contain ml-4'
     />
   </button>
 );
@@ -54,7 +54,7 @@ const SearchBar = ({ setManuFacturer, setModel }: SearchBarProps) => {
           value={searchModel}
           onChange={(e) => setSearchModel(e.target.value)}
           placeholder='Tiguan...'
-          className='searchbar__input'
+          className='searchbar__input bg-white'
         />
         <SearchButton otherClasses='sm:hidden' />
       </div>

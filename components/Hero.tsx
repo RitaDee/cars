@@ -7,18 +7,17 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
-        <h1 className="hero__title">
-          Find, book, or rent a car - quickly and easily!
+        <h1 className="hero__title text-gray-800">
+          Discover Your Perfect Ride – Find, Book, and Cruise in Style!
         </h1>
 
         <p className="hero__subtitle">
-          Streamline your car rental experience with our effortless booking
-          process.
+          Revolutionize Your Car Rental: Seamless Booking Made Simple
         </p>
 
         <CustomButon
           title="Explore Cars"
-          containerStyles="bg-primary-blue
+          containerStyles="bg-green-800
             text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
