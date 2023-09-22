@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import CustomButton from './CustomButton';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
 import CarDetails from './CarDetails';
 
 interface CarCardProps {
@@ -34,7 +34,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
 
       <div className="relative w-full h-40 my-3 object-contain">
-        <Image src="/hero.png" alt='car model' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
@@ -58,7 +58,7 @@ const CarCard = ({ car }: CarCardProps) => {
         <div className="car-card__btn-container">
           <CustomButton
           title="View More"
-          containerStyles="w-full py-4 rounded-full bg-primary-blue"
+          containerStyles="w-full py-4 rounded-full bg-green-800"
           textStyles="text-white text-sm leading-5 font-bold"
           rightIcon="/right-arrow.svg"
           handleClick={() => setIsOpen(true)}

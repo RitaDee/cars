@@ -20,7 +20,7 @@ const Navbar = () => {
         <CustomButton
         title="Sign In"
         btnType="button" 
-        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+        containerStyles="text-white rounded-full bg-green-800 min-w-[130px]"
         />
       </nav>
     </header>
